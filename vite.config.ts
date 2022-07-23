@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import viteTsConfigPath from 'vite-tsconfig-paths'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,5 +10,7 @@ export default defineConfig({
       babel: {
         plugins: ['@emotion/babel-plugin'],
       },
-    })]
+    }),
+    viteTsConfigPath(),
+  ],
 })
