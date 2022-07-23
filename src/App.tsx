@@ -1,33 +1,36 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import ChakraBox from './core/chakra/ChakraBox'
+import { Container } from '@chakra-ui/react'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <Container h="100vh" display="flex" alignItems="center" justifyContent="center">
+    <ChakraBox
+      animate={{
+        scale: [1, 2, 2, 1, 1],
+        rotate: [0, 0, 270, 270, 0],
+        borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+      }}
+      // @ts-ignore no problem in operation, although type error appears.
+      transition={{
+        duration: 3,
+        ease: "easeInOut",
+        repeat: Infinity,
+        repeatType: "loop",
+      }}
+      padding="2"
+      bgGradient="linear(to-l, #7928CA, #FF0080)"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      width="100px"
+      height="100px"
+    >
+      I'm Dizzy!
+    </ChakraBox>
+  </Container>
   )
 }
 
