@@ -1,0 +1,8 @@
+{
+  "name": "react-vite-plate",
+  "version": "1.0.0",
+  "description": "react boilerplate with vite",
+  "author": "Asa <cho2304@naver.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.2"
+}
